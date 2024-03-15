@@ -6,13 +6,13 @@ const darkMode = document.querySelector(".light-mode-button")
 
 darkMode.addEventListener("click", () => {
   var app = document.getElementsByTagName("BODY")[0];
-  if (localStorage.lightMode == "dark") {
+  if (localStorage.lightMode == "dark" || false) {
 
     localStorage.lightMode = "light";
     app.setAttribute("light-mode", "light");
   } else {
 
-    localStorage.lightMode = "dark";
+    localStorage.lightMode = "dark" ;
     app.setAttribute("light-mode", "dark");
   }
 
