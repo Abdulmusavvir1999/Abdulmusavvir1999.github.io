@@ -20,7 +20,7 @@ darkMode.addEventListener("click", () => {
 
 window.onload = () => {
 
-  if (localStorage.lightMode == "dark") {
+  if (localStorage.lightMode == "dark" || true) {
     app.setAttribute("light-mode", "dark");
   } 
   else {
