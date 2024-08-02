@@ -19,7 +19,20 @@
 
 }
 
+@media(max-width:930px) {
+
+    /* header */
+    header {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+}
+
 @media(max-width:850px) {
+
+
 
     /* design */
     .design-parent {
@@ -29,6 +42,7 @@
     .design-child {
         flex-direction: column;
     }
+
 
 }
 
@@ -88,6 +102,8 @@
 
     .about-para2 {
         font-size: 0.8rem;
+        max-width: 25rem;
+        text-align: justify;
     }
 
     .child-about-right {
@@ -216,7 +232,7 @@
         display: none;
     }
 
-    .image-text-sliders{
+    .image-text-sliders {
         display: block;
     }
 }

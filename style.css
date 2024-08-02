@@ -84,11 +84,12 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 0rem 1.5rem;
     color: var(--link-color);
+    gap: 0.5rem;
 }
 
-.scroll-down.active{
+.scroll-down.active {
     bottom: 2rem;
     pointer-events: auto;
     opacity: 1;
@@ -164,7 +165,7 @@ header {
     display: flex;
     transform: skew(-12deg);
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: 2.5rem;
 }
 
 .navTalk p {
@@ -179,6 +180,7 @@ header {
 
 .dark-talk {
     display: flex;
+    justify-content: center;
 }
 
 /* main-hamburger */
@@ -236,6 +238,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-block: var(--div-margin);
     column-gap: 10rem;
     width: 100%;
@@ -261,6 +264,8 @@ hr {
     color: gray;
     line-height: 1.8rem;
     margin-block: 1rem;
+    width: 100%;
+    max-width: 30rem;
 }
 
 
@@ -309,9 +314,10 @@ hr {
     margin-block: 2rem;
     width: 100%;
 }
-.social-media a:hover{
-        cursor: pointer;
-        animation: shake 0.5s 1.5;   
+
+.social-media a:hover {
+    cursor: pointer;
+    animation: shake 0.5s 1.5;
 }
 
 .fa {
@@ -766,12 +772,13 @@ hr {
 
 
 }
+
 .content:hover {
     opacity: 1;
-}    
-    
+}
 
-.image:hover{
+
+.image:hover {
     transform: scale(110%);
 
 }
@@ -1049,6 +1056,7 @@ hr {
             color: var(--orange-color);
         }
     }
+
     .holderCircle {
         width: 500px;
         height: 500px;
@@ -1056,8 +1064,8 @@ hr {
         margin: 60px auto;
         position: relative;
     }
-    
-    
+
+
     .dotCircle {
         width: 100%;
         height: 100%;
@@ -1070,17 +1078,17 @@ hr {
         border-radius: 100%;
         z-index: 20;
     }
-    
+
     .dotCircle img {
         max-width: 5rem;
         border-radius: 40%;
     }
-    
+
     .dotCircle img:hover {
         cursor: pointer;
         animation: shake 0.5s 0.8;
     }
-    
+
     .dotCircle .itemDot {
         display: block;
         width: 80px;
@@ -1089,7 +1097,7 @@ hr {
         z-index: 3;
         cursor: pointer;
     }
-    
+
     .dotCircle .itemDot .forActive {
         width: 56px;
         height: 56px;
@@ -1100,7 +1108,7 @@ hr {
         bottom: 0;
         display: none;
     }
-    
+
     .dotCircle .itemDot .forActive::after {
         content: '';
         width: 5px;
@@ -1112,7 +1120,7 @@ hr {
         position: absolute;
         border-radius: 100%;
     }
-    
+
     .dotCircle .itemDot .forActive::before {
         content: '';
         width: 6px;
@@ -1124,11 +1132,11 @@ hr {
         border: 6px solid var(--orange-color);
         right: -39px;
     }
-    
+
     .dotCircle .itemDot.active .forActive {
         display: block;
     }
-    
+
     .round {
         position: absolute;
         left: 40px;
@@ -1138,12 +1146,12 @@ hr {
         border: 2px dotted var(--orange-color);
         border-radius: 100%;
     }
-    
-    
+
+
     .dotCircle .itemDot {
         font-size: 40px;
     }
-    
+
     .contentCircle {
         width: 250px;
         border-radius: 100%;
@@ -1153,16 +1161,16 @@ hr {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    
+
     /* circle items */
-    
+
     .CirItem {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .contentCircle .CirItem {
         border-radius: 100%;
         color: #222222;
@@ -1181,14 +1189,14 @@ hr {
         margin: auto;
         line-height: 250px;
     }
-    
+
     .CirItem.active {
         z-index: 1;
         opacity: 1;
         transform: scale(1);
         transition: 0.5s;
     }
-    
+
     .contentCircle .CirItem i {
         font-size: 180px;
         position: absolute;
@@ -1199,19 +1207,19 @@ hr {
         color: #000000;
         opacity: 0.3;
     }
-    
+
     .contentCircle .CirItem img {
         margin-left: 2.5rem;
         width: 5rem;
     }
-    
+
     /* circle-text-area */
-    
+
     .title-box .title {
         font-weight: 600;
         z-index: -1;
     }
-    
+
     .title-box span {
         display: block;
         margin-top: 5rem;
@@ -1219,14 +1227,14 @@ hr {
         font-weight: 800;
         color: var(--orange-color);
     }
-    
+
     .title-box p {
         font-size: 1rem;
         line-height: 2em;
         margin-top: -3rem;
         color: var(--link-color);
     }
-    
+
 }
 
 
@@ -1245,6 +1253,7 @@ hr {
         margin: auto;
         font-size: 2rem;
         text-align: center;
+
         span {
             color: var(--orange-color);
         }
@@ -1253,6 +1262,7 @@ hr {
     .mySlides {
         /* display: none; */
         cursor: pointer;
+
         img {
             width: 5rem;
             display: flex;
@@ -1260,7 +1270,7 @@ hr {
             opacity: 0.3;
         }
     }
-    
+
     .prev,
     .next {
         cursor: pointer;
@@ -1274,17 +1284,17 @@ hr {
         font-size: 20px;
         border-radius: 0 3px 3px 0;
     }
-    
+
     .next {
         right: 3%;
         border-radius: 3px 0 0 3px;
     }
-    
+
     .prev:hover,
     .next:hover {
         background-color: #ff595924;
     }
-    
+
     /* Number text (1/3 etc) */
     .image-text {
         color: var(--link-color);
@@ -1295,7 +1305,7 @@ hr {
         text-align: center;
         margin-left: 0.5rem;
     }
-    
+
     /* Container for image text */
     .caption-container {
         text-align: center;
@@ -1305,11 +1315,12 @@ hr {
         border-radius: 0.5rem;
         color: white;
     }
-    
+
     /* Six columns side by side */
     .column {
         float: left;
         cursor: pointer;
+
         img {
             max-width: 5rem;
             height: 5rem;
@@ -1317,12 +1328,12 @@ hr {
             border-radius: 40%;
         }
     }
-    
+
     /* Add a transparency effect for thumnbail images */
     .demo {
         opacity: 0.6;
     }
-    
+
     .active,
     .demo:hover {
         opacity: 1;
@@ -1618,9 +1629,10 @@ hr {
 .footer-social-media a {
     text-decoration: none;
 }
+
 .footer-social-media a:hover {
-        cursor: pointer;
-        animation: shake 0.5s 1.5;   
+    cursor: pointer;
+    animation: shake 0.5s 1.5;
 }
 
 /* move pages */
@@ -1651,47 +1663,40 @@ hr {
 
 /* dark-mode */
 
-/* Light Mode Button Styles */
+.night-toggle {
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    position: absolute;
+}
 
-.light-mode-button {
-    background: 0;
-    border: 0;
-    box-sizing: border-box;
+.night-toggle:hover {
     cursor: pointer;
-    width: 2rem;
-    height: 1rem;
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0);
-    margin-block: 0.75rem;
 }
 
-.light-mode-button:focus {
-    outline: none;
-}
-
-.light-mode-button span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2rem;
-    height: 1rem;
-    border-radius: 20px;
-    background-color: var(--bg-color);
-    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
-    transition: 0.3s;
-}
-
-.light-mode-button span:nth-child(2) {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: #fff;
+.moon {
+    background-color: transparent;
+    box-shadow: -6px 1px 0 3px var(--orange-color);
+    border-left: 3px solid var(--orange-color);
     border-radius: 50%;
-    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
-    transition: 0.3s;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    margin-top: 0px;
+    transition: 1s;
 }
+
+.sun {
+    background-color: #fdd462;
+    box-shadow: 2px 0px 0px 1px #D19C29;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    transition: 1s;
+}
+
+
 
 /* Light & Dark Mode Styles
 		--------------------------- */
@@ -1719,6 +1724,7 @@ body[light-mode="dark"] .light-mode-button span:nth-child(2) {
 body[light-mode="light"] h1 {
     color: black;
 }
+
 body[light-mode="light"] p {
     color: black;
 }
@@ -1730,7 +1736,8 @@ body[light-mode="light"] .navName h2:nth-child(2) {
 body[light-mode="light"] .footer h2:nth-child(2) {
     color: black;
 }
-body[light-mode="light"] .about-hire a{
+
+body[light-mode="light"] .about-hire a {
     color: var(--link-color);
 }
 
@@ -1780,4 +1787,3 @@ body[light-mode="light"] .input-mobile-hamburger:checked~.down-bar-hamburger {
     background-color: var(--orange-color);
     border-radius: 2rem;
 }
-
