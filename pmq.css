@@ -64,6 +64,11 @@
     .navTalk {
         margin: auto;
         margin-block: 1rem;
+
+        a {
+            text-decoration: none;
+            color: var(--link-color);
+        }
     }
 
     .dark-talk {
