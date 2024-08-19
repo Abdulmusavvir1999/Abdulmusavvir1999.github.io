@@ -28,32 +28,102 @@ for (let i = 0; i < filterImg.length; i++) {
 }
 
 
-//fullscreen image preview function
-
-const previewBox = document.querySelector(".preview-box"),
-  categoryName = previewBox.querySelector(".title p"),
-  previewImg = previewBox.querySelector("img"),
-  closeIcon = previewBox.querySelector(".icon"),
-  shadow = document.querySelector(".shadow");
-
-function preview(element) {
-
-  document.querySelector("body").style.overflow = "hidden";
-  let selectedPrevImg = element.querySelector("img").src;
-  console.log(selectedPrevImg);
-  let selectedImgCategory = element.getAttribute("data-name");
-  previewImg.src = selectedPrevImg;
-  categoryName.textContent = selectedImgCategory;
-  previewBox.classList.add("show");
-  console.log(previewBox);
-  shadow.classList.add("show");
-  shadow.classList.add("show");
-  closeIcon.onclick = () => {
-    previewBox.classList.remove("show");
-    shadow.classList.remove("show");
-    document.querySelector("body").style.overflow = "auto";
+document.addEventListener("DOMContentLoaded", () => {
+  // Ensure the elements exist before using them
+  const previewBox = document.querySelector(".preview-box");
+  if (!previewBox) {
+    console.error("Element with class 'preview-box' not found.");
+    return;
   }
-}
+
+  const categoryName = previewBox.querySelector(".title p");
+  const previewImg = previewBox.querySelector("img");
+  const closeIcon = previewBox.querySelector(".icon");
+  const shadow = document.querySelector(".shadow");
+
+  // Ensure all required elements are found
+  if (!categoryName || !previewImg || !closeIcon || !shadow) {
+    console.error("One or more required elements are missing.");
+    return;
+  }
+
+  // Function to preview the image
+  function preview(element) {
+    const selectedPrevImg = element.querySelector("img").src;
+    const selectedLink = element.querySelector(".img-link") ? element.querySelector(".img-link").href : '#'; // Fallback if .img-link is not found
+    const selectedImgCategory = element.getAttribute("data-name");
+
+    if (previewImg) {
+      previewImg.src = selectedPrevImg;
+    } else {
+      console.error("Preview image element not found.");
+    }
+
+    if (categoryName) {
+      categoryName.textContent = selectedImgCategory;
+    } else {
+      console.error("Category name element not found.");
+    }
+
+    const link = previewBox.querySelector(".link"); // Use link within the scope of the previewBox
+    if (link) {
+      link.href = selectedLink;
+    } else {
+      console.error("Link element inside preview box not found.");
+    }
+
+    // Check that previewBox and shadow exist before adding classes
+    if (previewBox && shadow) {
+      previewBox.classList.add("show");
+      shadow.classList.add("show");
+    } else {
+      console.error("Preview box or shadow element not found.");
+    }
+
+    // Handle potential issues with body style
+    try {
+      document.body.style.overflow = "hidden";
+    } catch (error) {
+      console.error("Error setting body overflow style:", error);
+    }
+  }
+
+  // Function to close the preview
+  function closePreview() {
+    if (previewBox && shadow) {
+      previewBox.classList.remove("show");
+      shadow.classList.remove("show");
+    }
+
+    // Handle potential issues with body style
+    try {
+      document.body.style.overflow = "auto";
+    } catch (error) {
+      console.error("Error resetting body overflow style:", error);
+    }
+  }
+
+  // Add click event listeners to gallery items
+  const imageItems = document.querySelectorAll(".image");
+  if (imageItems.length === 0) {
+    console.warn("No gallery items found.");
+  }
+  imageItems.forEach(item => {
+    item.addEventListener("click", () => preview(item));
+  });
+
+  // Close preview when clicking close icon or shadow
+  if (closeIcon) {
+    closeIcon.addEventListener("click", closePreview);
+  }
+
+  if (shadow) {
+    shadow.addEventListener("click", closePreview);
+  }
+});
+
+
+
 
 
 

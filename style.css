@@ -10,7 +10,7 @@
 
 html,
 body {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -619,6 +619,7 @@ hr {
     justify-content: center;
     gap: 3rem;
     cursor: pointer;
+    margin-inline: 1rem;
 }
 
 .design-box {
@@ -762,6 +763,7 @@ hr {
 
 .img {
     position: relative;
+    transition: transform 0.5s;
 
     .content {
         position: absolute;
@@ -773,31 +775,30 @@ hr {
         margin-block: 0.5rem;
         background-color: #FFFFFF;
         transition: all 0.5s;
-        /* transform: translateX(-100%); */
         opacity: 0;
-
-        h3 {
-            color: #010F5C;
-
-        }
-
-        p {
-            color: var(--link-color);
-        }
+        transform: translateY(10px);
+        /* Added to make the transition smoother */
     }
 
+    &:hover {
+        transform: scale(1.1);
 
+        .content {
+            opacity: 1;
+            transform: translateY(0);
+            /* Adjust as needed */
+        }
+    }
 }
 
-.content:hover {
-    opacity: 1;
+.content h3 {
+    color: #010F5C;
 }
 
-
-.image:hover {
-    transform: scale(110%);
-
+.content p {
+    color: var(--link-color);
 }
+
 
 
 
@@ -853,8 +854,19 @@ hr {
     justify-content: space-between;
 }
 
+.preview-box p {
+    color: white !important;
+    padding: 0.5rem;
+
+    a {
+        color: blue;
+    }
+}
+
 .details .title {
     display: flex;
+    align-items: center;
+    justify-content: start;
     font-size: 18px;
     font-weight: 400;
 }
@@ -869,8 +881,8 @@ hr {
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: 1%;
-    top: 1rem;
+    right: 1rem;
+    top: 1.5rem;
 }
 
 .preview-box .image-box {
