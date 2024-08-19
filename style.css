@@ -38,7 +38,7 @@ body {
     position: fixed;
     z-index: 10;
     bottom: 5%;
-    right: 2%;
+    right: 1%;
     box-shadow: inset 0px 0px 100px 10px var(--small-bg-color);
     animation: bounce 2s infinite;
     z-index: 110;
@@ -87,6 +87,7 @@ header {
     padding: 2rem 1.5rem 0rem 1.5rem;
     color: var(--link-color);
     gap: 0.5rem;
+    position: relative;
 }
 
 .scroll-down.active {
@@ -133,6 +134,8 @@ header {
 .menuItem {
     font-weight: 400;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .menuItem a {
@@ -146,7 +149,7 @@ header {
 }
 
 .menuItem ul li {
-    margin-right: 3rem;
+    margin-right: 2rem;
 }
 
 .menuItem ul li a:hover {
@@ -165,17 +168,23 @@ header {
     display: flex;
     transform: skew(-12deg);
     cursor: pointer;
-    margin-right: 2.5rem;
+    margin-right: 2rem;
 }
 
-.navTalk p {
+.navTalk a {
     font-size: 1rem;
     font-weight: 500;
+    text-decoration: none;
+    color: var(--link-color);
 }
 
 .navTalk img {
     width: 1rem;
     align-items: center;
+}
+
+.navTalk:hover {
+    border-color: var(--orange-color);
 }
 
 .dark-talk {
@@ -238,9 +247,9 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-block: var(--div-margin);
-    column-gap: 10rem;
+    column-gap: 5rem;
     width: 100%;
     margin-inline: 0.75rem;
     padding-inline: 1rem;
@@ -249,6 +258,8 @@ hr {
 
 
 /* ! About-left */
+
+
 .about-left h1 {
     font-family: "Noto Sans", sans-serif;
     margin-top: 0.5rem;
@@ -261,6 +272,7 @@ hr {
 }
 
 .about-para2 {
+    text-align: justify;
     color: gray;
     line-height: 1.8rem;
     margin-block: 1rem;
@@ -316,6 +328,10 @@ hr {
 }
 
 .social-media a:hover {
+    cursor: pointer;
+}
+
+.social-media a:active {
     cursor: pointer;
     animation: shake 0.5s 1.5;
 }
@@ -812,7 +828,7 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    background: #fff;
+    background: #000000;
     max-width: 700px;
     width: 75vw;
     z-index: 5;
@@ -853,8 +869,8 @@ hr {
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: 5%;
-    top: 2.5%;
+    right: 1%;
+    top: 1rem;
 }
 
 .preview-box .image-box {
@@ -1632,6 +1648,10 @@ hr {
 
 .footer-social-media a:hover {
     cursor: pointer;
+}
+
+.footer-social-media a:active {
+    cursor: pointer;
     animation: shake 0.5s 1.5;
 }
 
@@ -1664,10 +1684,10 @@ hr {
 /* dark-mode */
 
 .night-toggle {
-    width: 2rem;
-    height: 2rem;
-    right: 1rem;
-    top: 1rem;
+    width: 20px;
+    height: 10px;
+    right: 20px;
+    top: 20px;
     position: absolute;
 }
 
@@ -1684,7 +1704,7 @@ hr {
     height: 20px;
     margin-left: 8px;
     margin-top: 0px;
-    transition: 1s;
+    transition: 2s;
 }
 
 .sun {
@@ -1693,10 +1713,50 @@ hr {
     border-radius: 50%;
     width: 26px;
     height: 26px;
-    transition: 1s;
+    transition: 2s;
 }
 
+/* Light Mode Button Styles */
 
+/* .light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 2rem;
+    height: 1rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-block: 0.75rem;
+}
+
+.light-mode-button:focus {
+    outline: none;
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 1rem;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+} */
 
 /* Light & Dark Mode Styles
 		--------------------------- */

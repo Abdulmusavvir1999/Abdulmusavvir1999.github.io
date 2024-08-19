@@ -1,4 +1,12 @@
-@media(max-width:980px) {
+@media(max-width:1070px) {
+
+    header {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
     /* work img */
 
     .gallery {
@@ -17,17 +25,6 @@
         width: 90vw;
     }
 
-}
-
-@media(max-width:930px) {
-
-    /* header */
-    header {
-        display: flex;
-        gap: 1rem;
-        padding: 1rem;
-        flex-direction: column;
-    }
 }
 
 @media(max-width:850px) {
@@ -70,6 +67,8 @@
             color: var(--link-color);
         }
     }
+
+
 
     .dark-talk {
         flex-direction: column;
