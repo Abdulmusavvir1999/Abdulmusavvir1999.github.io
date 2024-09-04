@@ -162,7 +162,7 @@ header {
 /* navTalk img */
 .navTalk {
     border: 2px solid var(--link-color);
-    padding: 0.5rem 1rem;
+    padding-inline-end: 0.8rem;
     border-radius: 0.5rem;
     display: flex;
     transform: skew(-12deg);
@@ -174,19 +174,20 @@ header {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--link-color);
+    color: black;
 }
 
 .navTalk img {
-    margin-right: 0.5rem;
-    width: 1rem;
+    width: 2.5rem;
     align-items: center;
     vertical-align: middle;
 }
 
 .navTalk:hover {
     border-color: var(--orange-color);
+
 }
+
 
 .dark-talk {
     display: flex;
@@ -832,7 +833,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     background: #000000;
-    max-width: 700px;
+    max-width: 500px;
     width: 75vw;
     z-index: 5;
     opacity: 0;
@@ -1779,6 +1780,9 @@ body {
     transition: background-color 0.3s;
 }
 
+
+/* dark mode */
+
 body[light-mode="dark"] {
     background-color: var(--bg-color);
     color: #ced4e2;
@@ -1794,6 +1798,17 @@ body[light-mode="dark"] .light-mode-button span:nth-child(2) {
     background-color: var(--white-color);
 }
 
+
+body[light-mode="dark"] .menuItem a {
+    color: white;
+}
+
+body[light-mode="dark"] .navTalk a {
+    color: white;
+}
+
+/* ! light mode */
+
 body[light-mode="light"] h1 {
     color: black;
 }
@@ -1803,9 +1818,6 @@ body[light-mode="light"] p {
 }
 
 
-body[light-mode="dark"] .menuItem a {
-    color: white;
-}
 
 body[light-mode="light"] .navName h2:nth-child(2) {
     color: black;
