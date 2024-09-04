@@ -174,11 +174,12 @@
     }
 
     .project-box:nth-child(1) {
-
         left: -18%;
     }
 
     .project-box:nth-child(2) {
+        bottom: 10%;
+
         left: -18%;
     }
 

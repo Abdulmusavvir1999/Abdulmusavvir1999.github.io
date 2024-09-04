@@ -113,12 +113,13 @@ header {
     border: transparent;
     border-radius: 50%;
     margin-right: 0.5rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
 .navName h2:nth-child(2) {
     display: flex;
+    align-items: center;
     font-weight: 700;
     color: var(--white-color);
     font-family: "Proxima Nova";
@@ -126,8 +127,6 @@ header {
 
 .navName h2:nth-child(2) span {
     color: var(--orange-color);
-    font-family: "Montserrat", sans-serif;
-
 }
 
 /* navMenuItem */
@@ -140,7 +139,7 @@ header {
 
 .menuItem a {
     text-decoration: none;
-    color: var(--link-color);
+    color: black;
 }
 
 .menuItem ul {
@@ -179,8 +178,10 @@ header {
 }
 
 .navTalk img {
+    margin-right: 0.5rem;
     width: 1rem;
     align-items: center;
+    vertical-align: middle;
 }
 
 .navTalk:hover {
@@ -273,7 +274,7 @@ hr {
 
 .about-para2 {
     text-align: justify;
-    color: gray;
+    color: white;
     line-height: 1.8rem;
     margin-block: 1rem;
     width: 100%;
@@ -292,13 +293,13 @@ hr {
     font-weight: 500;
     transform: skew(-5deg);
     box-shadow: 0px 2px 5px 1px var(--orange-color);
-    margin-block: 1.5rem;
+    margin-block: 0.5rem;
     cursor: pointer;
 
     img {
         vertical-align: middle;
         width: 1rem;
-        margin-right: 0.5rem;
+        /* margin-right: 0.5rem; */
     }
 }
 
@@ -310,7 +311,7 @@ hr {
 .about-hire a {
     display: inline-block;
     color: #FFFFFFCC;
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .about-hire a:hover {
@@ -481,7 +482,6 @@ hr {
 }
 
 .project-right {
-
     max-width: 30rem;
 }
 
@@ -564,7 +564,7 @@ hr {
 }
 
 .project-right p {
-    color: gray;
+    color: white;
     line-height: 1.8rem;
     margin-block: 1rem;
 }
@@ -652,7 +652,7 @@ hr {
     p {
         line-height: 1.7rem;
         font-size: 0.75rem;
-        color: #25283A80;
+        color: black;
     }
 }
 
@@ -696,10 +696,12 @@ hr {
     cursor: pointer;
 
     .item {
+        font-size: 1.1rem;
         text-decoration: none;
         margin-left: 1rem;
         margin-block: 0.5rem;
         color: var(--link-color);
+        font-weight: 500;
     }
 
     .item:hover {
@@ -1532,7 +1534,7 @@ hr {
 }
 
 .contact-right ::placeholder {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--link-color);
 }
 
@@ -1596,12 +1598,13 @@ hr {
     border: transparent;
     border-radius: 50%;
     margin-right: 0.5rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
 .footer-Name h2:nth-child(2) {
     display: flex;
+    align-items: center;
     font-weight: 700;
     color: var(--white-color);
     font-family: "Proxima Nova";
@@ -1609,8 +1612,6 @@ hr {
 
 .footer-Name h2:nth-child(2) span {
     color: var(--orange-color);
-    font-family: "Montserrat", sans-serif;
-
 }
 
 /* footer-MenuItem */
@@ -1799,6 +1800,11 @@ body[light-mode="light"] h1 {
 
 body[light-mode="light"] p {
     color: black;
+}
+
+
+body[light-mode="dark"] .menuItem a {
+    color: white;
 }
 
 body[light-mode="light"] .navName h2:nth-child(2) {
