@@ -11,7 +11,7 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 :root {
@@ -833,7 +833,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     background: #000000;
-    max-width: 500px;
+    max-width: 600px;
     width: 75vw;
     z-index: 5;
     opacity: 0;
