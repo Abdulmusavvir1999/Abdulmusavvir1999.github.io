@@ -31,20 +31,7 @@ darkMode.addEventListener("click", () => {
 if (localStorage.lightMode == "dark") {
   app.setAttribute("light-mode", "dark");
 }
-// function switchMode() {
-//   let moon = document.getElementById("moon");
-//   if (moon.className == "moon") {
-//     moon.className = "sun";
-//     document.body.style.backgroundColor = "#141D26";
-//     document.body.style.color = "#fff";
-//   }
-//   else {
-//     moon.className = "moon";
-//     document.body.style.backgroundColor = "#fff";
-//     document.body.style.color = "#000";
-//   }
 
-// }
 window.onload = () => {
 
   if (localStorage.lightMode == "dark" || false) {
