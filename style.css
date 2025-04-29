@@ -1777,6 +1777,8 @@ hr {
 body {
     background-color: var(--white-color);
     transition: background-color 0.3s;
+    color: #141516;
+
 }
 
 
