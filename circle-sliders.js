@@ -43,8 +43,6 @@ $(document).ready(function () {
             "transform": "rotate(" + ((i - 1) * 36) + "deg)",
             "transition": "1s"
         });
-
-
     });
 
 
