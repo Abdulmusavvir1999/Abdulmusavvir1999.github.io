@@ -80,13 +80,20 @@ body {
 
 header {
     display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 1.5rem 0rem 1.5rem;
+    padding: 1rem;
     color: var(--link-color);
+    background: var(--bg-color);
     gap: 0.5rem;
-    position: relative;
+    box-shadow: 3px 3px 3px var(--small-bg-color);
+    /* position: relative; */
 }
 
 .scroll-down.active {
@@ -147,19 +154,31 @@ header {
 }
 
 .menuItem ul li {
+    display: flex;
+    gap: 0.3rem;
     margin-right: 2rem;
 }
 
-.menuItem ul li a:hover {
-    color: var(--orange-color);
+.menuItem ul li svg {
+    fill: var(--white-color);
 }
+
+.menuItem ul li:hover {
+    a {
+        color: var(--orange-color);
+    }
+    svg {
+        fill: var(--orange-color) !important;
+    }
+}
+
 
 .menuItem ul li:hover {
     transform: scale(110%);
 }
 
 /* navTalk img */
-.navTalk {
+.navTalk ,.hamburger-navTalk{
     border: 2px solid var(--link-color);
     padding-inline-end: 0.8rem;
     border-radius: 0.5rem;
@@ -169,20 +188,20 @@ header {
     margin-right: 2rem;
 }
 
-.navTalk a {
+.navTalk a ,.hamburger-navTalk a{
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     color: black;
 }
 
-.navTalk img {
+.navTalk img ,.hamburger-navTalk img{
     width: 2.5rem;
     align-items: center;
     vertical-align: middle;
 }
 
-.navTalk:hover {
+.navTalk:hover , .hamburger-navTalk:hover {
     border-color: var(--orange-color);
 
 }
@@ -196,9 +215,12 @@ header {
 /* main-hamburger */
 
 .main-hamburger {
-
+    
     .three-line {
-        position: relative;
+        z-index: 10;
+        position: fixed;
+        top: 0.75rem;
+        right: 3rem;
         background-color: #FFFFFF;
         flex-direction: column;
         border: 1px solid rgba(128, 128, 128, 0.226);
@@ -243,6 +265,10 @@ hr {
     border: 1px solid rgba(128, 128, 128, 0.164);
 }
 
+.main-hamburger{
+    display: none;
+}
+
 /*! about */
 .about {
     display: flex;
@@ -266,6 +292,7 @@ hr {
     margin-top: 0.5rem;
     font-size: 2rem;
     font-weight: bolder;
+    text-wrap: nowrap;
 
     span {
         color: var(--orange-color);
@@ -682,13 +709,13 @@ hr {
     margin-bottom: var(--div-margin);
     background: var(--background-color);
     /* Optional: Set a background for the section */
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
     border-radius: 10px;
 }
 
 .skill-section h1 {
     font-size: 2rem;
-    margin-block: 1rem;
+    /* margin-block: 1rem; */
     color: var(--white-color);
     text-align: center;
     /* Center the title */
@@ -801,7 +828,7 @@ hr {
     margin-bottom: var(--div-margin);
     background: var(--background-color);
     /* Optional: Set a background for the section */
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
     border-radius: 10px;
 }
 
@@ -817,11 +844,135 @@ hr {
 .work-section h1 span {
     color: var(--orange-color);
 }
+
 .work-section p:first-of-type {
     font-size: 1rem;
     font-weight: 500;
     text-align: start;
 }
+
+
+.accordion {
+    max-width: 800px;
+    margin-top: 1rem;
+    /* margin: auto; */
+}
+
+.accordion-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #34495e;
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    padding: 0 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: #fcfcfc;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 20px 24px;
+    max-height: 1000px;
+    /* Increase max-height for smooth expansion */
+}
+
+.accordion-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.stack p {
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 3px solid #3498db;
+}
+
+.github-link a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed #2c3e50;
+    transition: color 0.3s, border 0.3s;
+}
+
+.github-link a:hover {
+    color: #2980b9;
+    border-bottom: 1px solid #2980b9;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+    /* Indentation for the list */
+    list-style-type: none;
+    /* Remove default bullets */
+}
+
+.accordion-content li {
+    position: relative;
+    margin-bottom: 10px;
+    /* Spacing between list items */
+    padding-left: 30px;
+    /* Space for the custom bullet */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    /* Text color */
+}
+
+.accordion-content li::before {
+    content: '\2022';
+    /* Unicode character for a filled circle */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #3498db;
+    /* Custom bullet color */
+}
+
+.accordion-content li strong {
+    font-weight: 600;
+    /* Bold the strong text */
+    color: #2c3e50;
+    /* Strong text color */
+}
+
+.accordion-content li:last-child {
+    margin-bottom: 0;
+    /* Remove bottom margin for the last list item */
+}
+
 
 
 /* ! details */
@@ -1707,7 +1858,7 @@ body[light-mode="dark"] .light-mode-button span:nth-child(1) {
 }
 
 body[light-mode="dark"] .light-mode-button span:nth-child(2) {
-    left: 20px;
+    left: 20px; 
     background-color: var(--white-color);
 }
 
@@ -1716,7 +1867,7 @@ body[light-mode="dark"] .menuItem a {
     color: white;
 }
 
-body[light-mode="dark"] .navTalk a {
+body[light-mode="dark"] .navTalk a, .hamburger-navTalk a {
     color: white;
 }
 
@@ -1730,7 +1881,14 @@ body[light-mode="light"] p {
     color: black;
 }
 
+body[light-mode="light"] header {
+    background: var(--white-color);
+}
 
+
+body[light-mode="light"] .menuItem ul li svg {
+    fill: var(--bg-color);
+}
 
 body[light-mode="light"] .navName h2:nth-child(2) {
     color: black;

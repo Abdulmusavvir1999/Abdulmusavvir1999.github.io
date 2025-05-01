@@ -5,11 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <!-- font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,14 +26,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- css -->
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="my work.css"> -->
+
   <!-- js -->
   <script defer src="filter-gallery.js"></script>
   <script defer src="dark-mode.js"></script>
+  <script defer src="circle-sliders.js"></script>
   <script defer src="script.js"></script>
   <!-- media-query -->
   <link rel="stylesheet" href="pmq.css">
   <!-- Aos- -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- circle-slider -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -52,9 +55,9 @@
     <nav class="menuItem">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="service-page.html">Service</a></li>
-        <li><a href="portfolio-page.html">Portfolio</a></li>
-        <li><a href="Testmonial-page.html">Testimonial</a></li>
+        <li><a href="project-page.html">Project</a></li>
+        <li><a href="portfolio-page.html">About</a></li>
+        <!-- <li><a href="Testmonial-page.html">Testimonial</a></li> -->
         <li><a href="contact-page.html">Contact</a></li>
       </ul>
     </nav>
@@ -96,11 +99,40 @@
   <!-- mobile-view -->
   <hr>
   <div class="page-heading">
-    <h1>Portfolio</h1>
-    <p>Home > <span>Portfolio</span></p>
+    <h1>Service</h1>
+    <p>Home > <span>Service</span></p>
   </div>
 
-  <!-- todo My-Recent-Work -->
+  <!-- todo specialized -->
+
+  <section data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear" class="design-parent">
+    <div>
+      <h1>I’m <span>Specialized</span> in</h1>
+    </div>
+    <div class="design-child">
+      <div class="design-box app">
+        <div class="design-img-bg">
+          <img src="img/app.svg" alt="">
+        </div>
+        <h2>App Design</h2>
+        <p>I have 1+ years of experience in App Design section. </p>
+      </div>
+      <div class="design-box web">
+        <div class="design-img-bg">
+          <img src="img/web.svg" alt="">
+        </div>
+        <h2>Web Design</h2>
+        <p>I have 1+ years of experience in Web Design section. </p>
+      </div>
+      <div class="design-box product">
+        <div class="design-img-bg">
+          <img src="img/product.svg" alt="">
+        </div>
+        <h2>Full Stack Developer</h2>
+        <p>I have 1+ years of experience in Product Design section. </p>
+      </div>
+    </div>
+  </section>
 
   <!-- todo My-Recent-Work -->
 
@@ -200,6 +232,7 @@
     </div>
     <div class="shadow"></div>
   </section>
+
   <!--todo details  -->
 
   <section data-aos="fade-right" data-aos-duration="500" data-aos-easing="linear" class="achievement">
@@ -207,7 +240,7 @@
     <div class="detail">
       <img src="./img/Projects Done img.svg" alt="">
       <div>
-        <h1>270+</h1>
+        <h1>1+</h1>
         <p>Projects Done</p>
       </div>
     </div>
@@ -216,7 +249,7 @@
     <div class="detail">
       <img src="img/Satisfied Clients img.svg" alt="">
       <div>
-        <h1>80+</h1>
+        <h1>1+</h1>
         <p>Satisfied Clients</p>
       </div>
     </div>
@@ -225,7 +258,7 @@
     <div class="detail">
       <img src="img/Active Projects img.svg" alt="">
       <div>
-        <h1>27+</h1>
+        <h1>1+</h1>
         <p>Active Projects</p>
       </div>
     </div>
@@ -234,7 +267,7 @@
     <div class="detail">
       <img src="img/Team Members img.svg" alt="">
       <div>
-        <h1>5+</h1>
+        <h1>1+</h1>
         <p>Team Members</p>
       </div>
     </div>
@@ -314,7 +347,7 @@
     </div>
 
     <!-- footer-menuItem -->
-    <div class="footer-menuItem">
+    <!-- <div class="footer-menuItem">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="service-page.html">Service</a></li>
@@ -322,7 +355,7 @@
         <li><a href="Testmonial-page.html">Testimonial</a></li>
         <li><a href="contact-page.html">Contact</a></li>
       </ul>
-    </div>
+    </div> -->
 
   </section>
   </main>
