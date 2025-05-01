@@ -5,7 +5,7 @@
         gap: 1rem;
         padding: 1rem;
         flex-direction: column; */
-        padding-bottom: 0rem;
+        padding-bottom: 0.5rem;
     }
 
 
@@ -71,14 +71,14 @@
     .input-mobile-hamburger:checked~.down-bar-hamburger {
         display: flex;
         position: fixed;
-        top: 2rem;
-        z-index: auto;
+        top: 2.35rem;
+        z-index: 100;
         flex-direction: column;
         background-color: #101d2f;
         width: 100vw;
         align-items: start;
-        position: relative;
-        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.378);
+        /* position: relative; */
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.378);
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
         margin-top: 1rem;
