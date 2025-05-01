@@ -1450,7 +1450,7 @@ hr {
     column-gap: 3rem;
     margin-top: 5rem;
     margin-bottom: -5rem;
-    z-index: 20;
+    z-index: 1;
     position: relative;
 }
 
@@ -1638,9 +1638,9 @@ hr {
     justify-content: center;
     align-items: center;
     background-color: var(--small-bg-color);
-    padding-top: 8rem;
+    padding-top: 7rem;
     width: 100%;
-    height: 23rem;
+    height: 13rem;
 }
 
 /* footer-Name */
@@ -1739,7 +1739,8 @@ hr {
     justify-content: center;
     align-items: center;
     background-color: var(--small-bg-color);
-    padding: 3rem 4rem;
+    padding: 3rem 4rem 2rem;
+    margin-top: 3rem;
 
     h1 {
         font-size: 2.5rem;

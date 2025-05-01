@@ -46,6 +46,10 @@
         }
     }
 
+    .page-heading {
+        margin-top: 2rem;
+    }
+
     /* navTalk*/
     .navTalk {
         display: none;
@@ -121,15 +125,13 @@
 
     /* header */
     header {
-        display: flex;
         padding: 1rem;
-        flex-direction: column;
     }
 
     /* nav-name */
-    .navName {
+    /* .navName {
         margin: auto;
-    }
+    } */
 
     /* lets-talk */
     .navTalk {
@@ -178,7 +180,7 @@
 
     .about-para2 {
         font-size: 0.9rem;
-        padding:1rem;
+        padding: 1rem;
         max-width: 29rem;
         text-align: start;
     }
@@ -263,7 +265,7 @@
     /* right-side-project */
     .project-right p {
         font-size: 0.9rem;
-        padding:1rem;
+        padding: 1rem;
         max-width: 29rem;
         text-align: start;
     }
@@ -319,6 +321,11 @@
 }
 
 @media (max-width:450px) {
+
+    .navName {
+        font-size: 0.8rem;
+    }
+
     .menuItem ul {
         display: none;
         flex-direction: column;
@@ -333,6 +340,7 @@
     .navTalk {
         display: none;
     }
+
 
     /* hamburger */
     /* .main-hamburger {
