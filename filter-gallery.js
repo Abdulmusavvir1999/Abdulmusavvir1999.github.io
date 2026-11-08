@@ -6,7 +6,8 @@ const filterItem = document.querySelector(".items");
 const filterImg = document.querySelectorAll(".gallery, .image");
 
 
-filterItem.onclick = (selectedItem) => {
+// guard: pages without a filter bar (e.g. Testimonial) used to throw here
+if (filterItem) filterItem.onclick = (selectedItem) => {
   if (selectedItem.target.classList.contains("item")) {
     filterItem.querySelector(".active").classList.remove("active");
     selectedItem.target.classList.add("active");

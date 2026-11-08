@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Abdul Musavvir · Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer with 3 years of experience building e-commerce, ticket booking, ERP, point-of-sale and business applications for India, international and GCC markets." />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +55,6 @@
     />
 
     <!-- Aos- -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- circle-slider -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -62,16 +62,32 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- motion system -->
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script defer src="motion.js"></script>
   </head>
 
   <body>
+    <!-- intro / page-transition overlay (driven by motion.js) -->
+    <div class="mo-loader" aria-hidden="true">
+      <div class="mo-loader__layer mo-loader__layer--accent"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__layer mo-loader__layer--main"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__inner">
+        <div class="mo-loader__name"><span>Abdul</span><span>Musavvir</span></div>
+        <div class="mo-loader__bottom">
+          <div class="mo-loader__label"><span></span></div>
+          <div class="mo-loader__count"><span>0</span></div>
+        </div>
+      </div>
+      <div class="mo-loader__bar"></div>
+    </div>
     <div><a class="scroll-down" href="#"></a></div>
     <!-- todo header -->
-    <header
-      data-aos="fade-up-left"
-      data-aos-easing="ease-out-out"
-      data-aos-duration="1000"
-    >
+    <header>
       <div class="navName">
         <h2>A</h2>
         <h2>Abdul_ <span>Musavvir</span></h2>
@@ -254,24 +270,23 @@
     <main>
       <!-- todo about -->
       <section
-        data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
         class="about"
       >
         <!-- about-left -->
         <div class="about-left">
-          <p>Hello</p>
+          <p>Open to remote</p>
           <h1>I'm <span>Abdul Musavvir</span></h1>
           <h1>Full Stack Developer</h1>
+          <ul class="hero-stack" aria-label="Core stack">
+            <li>Node.js</li><li>Express</li><li>Angular</li><li>MySQL</li><li>Redis</li>
+          </ul>
           <p class="about-para2">
-            I'm a full-stack developer with 1 year of experience, passionate
-            about building responsive, user-friendly applications. I bring a
-            fresh design perspective, strong problem-solving skills, and a
-            continuous drive to learn and grow. I'm eager to contribute to
-            dynamic teams and help craft engaging digital experiences that make
-            an impact.
+            I’m a full stack developer with 3 years of experience building
+            e-commerce, ticket booking, ERP, point-of-sale and business
+            applications with Node.js, Express.js, Angular and MySQL. I’ve
+            integrated four payment gateways across India, international and GCC
+            markets, and built WhatsApp, SMS, email and push notification systems,
+            Redis caching, queue-based processing and cron-scheduled jobs.
           </p>
           <div class="about-hire">
             <a href="mailto:abdulmusavir8888@gmail.com"
@@ -305,6 +320,7 @@
               href="https://www.instagram.com/mr__whitey?igsh=bWlyMXpkcXhscGN2"
               class="fa fa-instagram"
             ></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
           </div>
         </div>
         <!-- about-right -->
@@ -320,16 +336,16 @@
           <img src="img/Rectangle 1.svg" alt="" />
           <div class="about-right-box">
             <div class="box about-right-box-one">
-              <h2>1+</h2>
+              <h2>3+</h2>
               <p>Years of Experience</p>
             </div>
             <div class="box about-right-box-two">
-              <h2>1+</h2>
-              <p>Happy Client</p>
+              <h2>4</h2>
+              <p>Payment Gateways</p>
             </div>
             <div class="box about-right-box-three">
-              <h2>1+</h2>
-              <p>Project Donel</p>
+              <h2>3</h2>
+              <p>Markets: India, Intl, GCC</p>
             </div>
           </div>
         </div>
@@ -338,10 +354,6 @@
       <!-- todo project second part -->
 
       <section
-        data-aos="fade-right"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
         class="project"
       >
         <!-- project-left -->
@@ -379,12 +391,11 @@
             Your Next<span>Project!</span>
           </h1>
           <p>
-            With a year of hands-on experience in full-stack development, I’m
-            eager to contribute to impactful projects. I specialize in building
-            user-centric digital solutions that emphasize performance, intuitive
-            design, and usability. My passion lies in solving problems through
-            thoughtful design, research, and seamless development across the
-            stack.
+            In 3 years of full-stack work I’ve taken ERP, booking and business
+            applications from ER diagram to production: designing MySQL schemas,
+            turning complex multi-step business flows into structured REST APIs,
+            and building the Angular front ends on top, including payments,
+            multi-channel notifications, Redis caching and scheduled jobs.
           </p>
           <!-- <a href="contact-page.html"><button> <img src="img/th-removebg-preview (1).png" alt=""> Hire Me</button></a> -->
         </div>
@@ -392,282 +403,318 @@
 
       <!-- todo specialized -->
 
-      <section
-        data-aos="fade-left"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        class="design-parent"
-      >
+      <section class="design-parent">
         <div>
           <h1>I’m <span>Specialized</span> in</h1>
         </div>
         <div class="design-child">
           <div class="design-box app">
-            <div class="design-img-bg">
-              <img src="img/app.svg" alt="" />
-            </div>
+            <div class="design-img-bg"><img src="img/app.svg" alt="" /></div>
             <h2>Front-End</h2>
-            <p>I have 1+ years of experience in FrontEnd Developer sector.</p>
+            <p>Angular, TypeScript, Tailwind CSS and SCSS for responsive, user-friendly ERP and business interfaces.</p>
           </div>
           <div class="design-box web">
-            <div class="design-img-bg">
-              <img src="img/web.svg" alt="" />
-            </div>
+            <div class="design-img-bg"><img src="img/web.svg" alt="" /></div>
             <h2>Back-End</h2>
-            <p>I have 1+ years of experience in BackEnd Developer sector.</p>
+            <p>Node.js and Express REST APIs with JWT, OAuth and role-based access, Redis caching, queues and cron jobs.</p>
           </div>
           <div class="design-box product">
-            <div class="design-img-bg">
-              <img src="img/product.svg" alt="" />
-            </div>
-            <h2>Web Design</h2>
-            <p>I have 1+ years of experience in Product Design sector.</p>
+            <div class="design-img-bg"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div>
+            <h2>Payments &amp; Alerts</h2>
+            <p>Stripe, Razorpay, MyFatoorah and Hesabe checkouts, plus WhatsApp, SMS, email and push notifications.</p>
+          </div>
+          <div class="design-box product">
+            <div class="design-img-bg"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <h2>Data &amp; Design</h2>
+            <p>MySQL and MongoDB schema design, ER diagrams and workflow design for multi-step business flows.</p>
           </div>
         </div>
       </section>
 
       <!-- My Skill -->
-      <section
-        class="skill-section"
-        data-aos="fade-up-left"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        class="design-parent"
-      >
+      <section class="skill-section">
         <h1>My <span>Skills</span></h1>
         <div class="all-skill-box">
           <div class="skill-box">
-            <img
-              src="/img/portofolio image/html.png"
-              alt=""
-              class="skill-img"
-            />
-            <p class="skill-name html-name">HTML</p>
+            <img src="img/portofolio image/node-js.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name nodejs-name">Node.js</p>
+            <span class="skill-cat">Runtime</span>
           </div>
           <div class="skill-box">
-            <img src="/img/portofolio image/css.png" alt="" class="skill-img" />
-            <p class="skill-name css-name">CSS</p>
+            <img src="img/portofolio image/expressJS.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name express-name">Express.js</p>
+            <span class="skill-cat">Framework</span>
           </div>
           <div class="skill-box">
-            <img
-              src="/img/portofolio image/tailwind.png"
-              alt=""
-              class="skill-img"
-            />
-            <p class="skill-name tailwind-name">Tailwind</p>
-          </div>
-          <div class="skill-box">
-            <img
-              src="/img/portofolio image/javascript.png"
-              alt=""
-              class="skill-img"
-            />
-            <p class="skill-name js-name">JS</p>
-          </div>
-          <div class="skill-box">
-            <img
-              src="/img/portofolio image/angular.png"
-              alt=""
-              class="skill-img"
-            />
+            <img src="img/portofolio image/angular.png" alt="" class="skill-img" loading="lazy" />
             <p class="skill-name angular-name">Angular</p>
+            <span class="skill-cat">Framework</span>
           </div>
           <div class="skill-box">
-            <img
-              src="/img/portofolio image/node-js.png"
-              alt=""
-              class="skill-img"
-            />
-            <p class="skill-name nodejs-name">NodeJS</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name ts-name">TypeScript</p>
+            <span class="skill-cat">Language</span>
           </div>
           <div class="skill-box">
-            <img
-              src="/img/portofolio image/expressJS.png"
-              alt=""
-              class="express-img"
-            />
-            <p class="skill-name express-name">ExpressJS</p>
-          </div>
-          <div class="skill-box">
-            <img
-              src="/img/portofolio image/my-sql.png"
-              alt=""
-              class="skill-img"
-            />
+            <img src="img/portofolio image/my-sql.png" alt="" class="skill-img" loading="lazy" />
             <p class="skill-name mysql-name">MySQL</p>
+            <span class="skill-cat">Database</span>
+          </div>
+          <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redis/redis-original.svg" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name redis-name">Redis</p>
+            <span class="skill-cat">Cache</span>
+          </div>
+          <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name mongo-name">MongoDB</p>
+            <span class="skill-cat">Database</span>
+          </div>
+          <div class="skill-box">
+            <img src="img/portofolio image/javascript.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name js-name">JavaScript</p>
+            <span class="skill-cat">Language</span>
+          </div>
+          <div class="skill-box">
+            <img src="img/portofolio image/html.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name html-name">HTML5</p>
+            <span class="skill-cat">Markup</span>
+          </div>
+          <div class="skill-box">
+            <img src="img/portofolio image/css.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name css-name">CSS3</p>
+            <span class="skill-cat">Styling</span>
+          </div>
+          <div class="skill-box">
+            <img src="img/portofolio image/tailwind.png" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name tailwind-name">Tailwind</p>
+            <span class="skill-cat">Styling</span>
+          </div>
+          <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" class="skill-img" loading="lazy" />
+            <p class="skill-name git-name">Git</p>
+            <span class="skill-cat">Version control</span>
           </div>
         </div>
+        <div class="skill-groups">
+          <div class="skill-group skill-group--wide">
+            <h2>Backend</h2>
+            <ul><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>JWT</li><li>OAuth</li><li>Passport.js</li><li>Role-Based Access Control</li></ul>
+          </div>
+          <div class="skill-group">
+            <h2>Payments</h2>
+            <ul><li>Stripe</li><li>Razorpay</li><li>MyFatoorah</li><li>Hesabe</li><li>Checkout</li><li>Verification</li><li>Webhooks</li></ul>
+          </div>
+          <div class="skill-group">
+            <h2>Notifications</h2>
+            <ul><li>WhatsApp Business</li><li>Meta Cloud API</li><li>SMS</li><li>Email</li><li>Firebase Cloud Messaging</li></ul>
+          </div>
+          <div class="skill-group skill-group--wide">
+            <h2>Frontend</h2>
+            <ul><li>Angular</li><li>TypeScript</li><li>JavaScript (ES6+)</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>SASS/SCSS</li></ul>
+          </div>
+          <div class="skill-group">
+            <h2>Performance &amp; Jobs</h2>
+            <ul><li>Redis caching</li><li>Queue systems</li><li>Cron jobs</li></ul>
+          </div>
+          <div class="skill-group">
+            <h2>Databases &amp; Design</h2>
+            <ul><li>MySQL</li><li>MongoDB</li><li>Schema Design</li><li>ER Diagrams</li><li>Workflow Design</li></ul>
+          </div>
+          <div class="skill-group skill-group--full">
+            <h2>Tools</h2>
+            <ul><li>Git</li><li>GitHub</li><li>GitLab</li><li>Postman</li><li>VS Code</li><li>Antigravity</li></ul>
+          </div>
+        </div>
+      </section>
+      <!-- typographic marquee (words from the resume) -->
+      <div class="mo-marquee" aria-label="Full Stack Developer: e-commerce, ticket booking, ERP, POS, payments; Node.js, Express, Angular, MySQL, Redis">
+        <div class="mo-marquee__tilt">
+          <div class="mo-marquee__row" aria-hidden="true">
+            <div class="mo-marquee__track">
+              <span class="mo-marquee__item">Full Stack Developer <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item mo-marquee__item--outline">E-commerce <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Ticket Booking <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item mo-marquee__item--outline">ERP Systems <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">POS <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item mo-marquee__item--outline">Payments <span class="mo-marquee__star">✦</span></span>
+            </div>
+          </div>
+          <div class="mo-marquee__row mo-marquee__row--outline" aria-hidden="true">
+            <div class="mo-marquee__track">
+              <span class="mo-marquee__item">Node.js <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Express <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Angular <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">TypeScript <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">MySQL <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Redis <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">MongoDB <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Tailwind <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Queues <span class="mo-marquee__star">✦</span></span>
+              <span class="mo-marquee__item">Cron <span class="mo-marquee__star">✦</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- experience (from resume) -->
+      <section class="exp-section" id="experience">
+        <h1>Work <span>Experience</span></h1>
+        <article class="exp-card">
+          <div class="exp-head">
+            <div>
+              <p class="exp-date">Jan 2024 – Present</p>
+              <h2>Full Stack Developer</h2>
+              <p class="exp-company">Cresentrix Solution</p>
+            </div>
+            <span class="exp-badge">Current role</span>
+          <ul class="exp-tags" aria-label="Technologies used">
+            <li>Node.js</li><li>Express.js</li><li>Angular</li><li>MySQL</li><li>Redis</li><li>Queues</li><li>Cron</li><li>Stripe</li><li>Razorpay</li><li>WhatsApp API</li><li>Firebase</li>
+          </ul>
+          </div>
+          <ul class="exp-list">
+            <li><strong>Payments</strong>Integrated Stripe, Razorpay, MyFatoorah and Hesabe payment gateways, handling checkout, payment verification and webhook-based status updates for customers in India, international and GCC markets.</li>
+            <li><strong>Bookings</strong>Built a booking system with slot availability, reservation and status flows, using queues to process bookings reliably and prevent conflicts.</li>
+            <li><strong>Notifications</strong>Developed a multi-channel notification service sending WhatsApp (Meta Business API), SMS, email and Firebase push notifications for bookings, payments and reminders.</li>
+            <li><strong>Performance</strong>Implemented Redis caching for frequently accessed data to reduce database load and improve API response times.</li>
+            <li><strong>Automation</strong>Automated recurring tasks such as reminders, status updates and reports with cron jobs.</li>
+            <li><strong>Data design</strong>Designed ER diagrams and MySQL schemas for ERP modules, and turned complex multi-step business flows into structured REST APIs.</li>
+            <li><strong>School ERP</strong>Built a School Management ERP covering curriculum, attendance, leave, payroll with automatic deductions, role-based access, and certificate, ID card and report card generation.</li>
+            <li><strong>POS Systems</strong>Built point-of-sale systems for jewelry, restaurant, shop and commercial businesses, including a jewelry POS with real-time price, tax and discount calculation and invoice generation.</li>
+            <li><strong>E-commerce &amp; Ticketing</strong>Worked on an e-commerce website and a ticket booking platform with dedicated vendor and organizer roles.</li>
+          </ul>
+        </article>
       </section>
 
       <!-- todo My-Recent-Work -->
 
-      <section
-        id="my-project"
-        data-aos="fade-down-right"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        class="work-section"
-      >
-        <!-- heading -->
+      <section id="my-project" class="work-section">
         <h1>My <span>Projects</span></h1>
-        <p>
-          The before starting any project I conduct in-depth market research to
-          gain strategic insights <br />
-          and ensure the best possible results...
-        </p>
+        <p>Highlights from a wide range of projects across e-commerce, ticket booking, ERP, point-of-sale and business applications.</p>
 
         <div class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item" data-tags="">
             <div class="accordion-header">
-              <span>Portfolio Management Project</span>
+              <span>Payment Gateway Integration</span>
+              <span class="proj-meta">Payments</span>
               <i class="fas fa-chevron-right"></i>
             </div>
             <div class="accordion-content">
-              <p>
-                The Portfolio Management System allows professionals to showcase
-                their work and achievements. It features two main panels: the
-                user-facing Portfolio Panel for browsing projects and connecting
-                with the owner, and the Admin Panel for managing and updating
-                content. Admins can modify projects, skills, and personal
-                information through a secure authentication system.
-              </p>
-              <p>
-                Built with Node.js, Express.js, MySQL, Angular, and Tailwind
-                CSS, the system supports CRUD operations and offers a responsive
-                design for desktop and mobile. Real-time updates ensure changes
-                are immediately reflected. Future enhancements may include
-                project analytics, file uploads, and CMS integration.
-              </p>
-
+              <p>Integrated four payment gateways (Stripe, Razorpay, MyFatoorah and Hesabe) for customers in India, international and GCC markets.</p>
+              <p>Each integration covers checkout, payment verification and webhook-based status updates.</p>
               <div class="stack">
-                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TS</p>
-                <p><strong>Back-End:</strong> Node.js, Express.js, MySQL</p>
-                <p><strong>Framework:</strong> Angular</p>
-              </div>
-              <p class="github-link">
-                <strong>Code:</strong> <a href="#">View on GitHub</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span>POS Jewelry Project</span>
-              <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="accordion-content">
-              <p>
-                This project is a full-featured Point of Sale (POS) system
-                tailored for a jewelry business. It includes core e-commerce
-                functionalities such as product listing, add-to-cart, and
-                wishlist management. The system dynamically calculates pricing,
-                taxes, and discounts in real-time, ensuring accurate invoice
-                generation.
-              </p>
-              <p>
-                The frontend is fully responsive, providing an optimized user
-                experience across mobile, tablet, and desktop screens. On the
-                backend, it supports complete CRUD operations for managing
-                products, categories, customers, and orders, making it a
-                practical and scalable solution for retail jewelry management.
-              </p>
-              <div class="stack">
-                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TS</p>
-                <p><strong>Back-End:</strong> Node.js, Express.js, MySQL</p>
-                <p><strong>Framework:</strong> Angular</p>
-              </div>
-              <p class="github-link">
-                <strong>Code:</strong> <a href="#">View on GitHub</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span>Angular Enhancement Projects</span>
-              <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="accordion-content">
-              <p>
-                You can enhance the design and functionality of the given
-                content by incorporating TypeScript for better type safety and
-                interactive features. For example, you can add functionality to
-                toggle the accordion state with TypeScript and improve the UI/UX
-                with animations or transitions using Angular. You might also
-                want to consider refactoring the HTML for cleaner code and
-                enhancing the styling with modern practices like CSS Grid or
-                Flexbox.
-              </p>
-              <div class="stack">
-                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TS</p>
-                <p><strong>Framework:</strong> Angular</p>
+                <p><strong>Gateways:</strong> Stripe, Razorpay, MyFatoorah, Hesabe</p>
+                <p><strong>Back-End:</strong> Node.js, Express.js, REST APIs, Webhooks</p>
+                <p><strong>Markets:</strong> India, International, GCC</p>
               </div>
             </div>
           </div>
-
-          <div class="accordion-item">
+          <div class="accordion-item" data-tags="ecommerce">
             <div class="accordion-header">
-              <span>School Management Projects</span>
+              <span>E-commerce Website</span>
+              <span class="proj-meta">E-commerce</span>
               <i class="fas fa-chevron-right"></i>
             </div>
             <div class="accordion-content">
-              <p>
-                This project is aimed at developing a comprehensive School
-                Management System designed to streamline critical school
-                operations, with a primary focus on Curriculum Management. The
-                system is structured to support a broad range of features that
-                enhance administrative efficiency and academic planning. These
-                include :
-              </p>
+              <p>An e-commerce website for selling products online, from the storefront through to checkout.</p>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="tickets vendors">
+            <div class="accordion-header">
+              <span>Ticket Booking Platform</span>
+              <span class="proj-meta">Ticketing</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>A ticket booking platform with dedicated vendor and organizer roles, each managing their own side of the platform.</p>
+              <div class="stack">
+                <p><strong>Roles:</strong> Vendors, Organizers</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="">
+            <div class="accordion-header">
+              <span>Booking System</span>
+              <span class="proj-meta">Bookings</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>A booking system with slot availability, reservation and status flows, using queues to process bookings reliably and prevent conflicts.</p>
+              <div class="stack">
+                <p><strong>Back-End:</strong> Node.js, Express.js, REST APIs</p>
+                <p><strong>Processing:</strong> Queue system</p>
+                <p><strong>Database:</strong> MySQL</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="">
+            <div class="accordion-header">
+              <span>Multi-channel Notification Service</span>
+              <span class="proj-meta">Messaging</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>A notification service sending WhatsApp (Meta Business API), SMS, email and Firebase push notifications for bookings, payments and reminders.</p>
+              <div class="stack">
+                <p><strong>Channels:</strong> WhatsApp Business (Meta Cloud API), SMS, Email, Firebase Cloud Messaging</p>
+                <p><strong>Back-End:</strong> Node.js, Express.js</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="schools">
+            <div class="accordion-header">
+              <span>School Management ERP</span>
+              <span class="proj-meta">ERP</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>A comprehensive School Management ERP designed to streamline critical school operations, with a primary focus on curriculum management. It includes:</p>
               <ul>
-                <li>
-                  <strong>Level-Based Curriculum Structure:</strong> Design and
-                  implement a tiered structure for easy subject assignments and
-                  teacher management.
-                </li>
-                <li>
-                  <strong>Teacher and Subject Assignment:</strong> Assign
-                  teachers to specific subjects to maintain an organized
-                  academic environment.
-                </li>
-                <li>
-                  <strong>Staff and Student Management:</strong> Create profiles
-                  for staff and students, allowing better management of their
-                  information, attendance, and activities.
-                </li>
-                <li>
-                  <strong>Attendance Tracking:</strong> Record and monitor
-                  attendance for both staff and students.
-                </li>
-                <li>
-                  <strong>Leave Management:</strong> Handle leave requests,
-                  including monthly leave limits, paid/unpaid leave, and
-                  holidays.
-                </li>
-                <li>
-                  <strong>Payroll and Salary Deduction:</strong> Automate
-                  payroll calculations with deductions for taxes, absences, and
-                  other reasons.
-                </li>
-                <li>
-                  <strong
-                    >Certificate, ID Card, and Report Card Generation:</strong
-                  >
-                  Generate certificates, ID cards, and report cards with
-                  customizable templates and a preview feature.
-                </li>
-                <li>
-                  <strong>Roles and Permissions:</strong> Implement role-based
-                  access control to manage permissions for different types of
-                  users (admins, teachers, staff, students).
-                </li>
+                <li><strong>Level-Based Curriculum Structure:</strong> A tiered structure for easy subject assignments and teacher management.</li>
+                <li><strong>Teacher and Subject Assignment:</strong> Assign teachers to specific subjects to keep the academic environment organized.</li>
+                <li><strong>Staff and Student Management:</strong> Profiles for staff and students covering their information, attendance and activities.</li>
+                <li><strong>Attendance Tracking:</strong> Record and monitor attendance for both staff and students.</li>
+                <li><strong>Leave Management:</strong> Leave requests, including monthly leave limits, paid/unpaid leave and holidays.</li>
+                <li><strong>Payroll and Salary Deduction:</strong> Automated payroll calculations with deductions for taxes, absences and other reasons.</li>
+                <li><strong>Certificate, ID Card and Report Card Generation:</strong> Customizable templates with a preview feature.</li>
+                <li><strong>Roles and Permissions:</strong> Role-based access control for admins, teachers, staff and students.</li>
               </ul>
               <div class="stack">
-                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TS</p>
-                <p>
-                  <strong>Back-End:</strong> Node.js, Express.js, MySQL, ERP
-                  Diagram
-                </p>
+                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TypeScript</p>
+                <p><strong>Back-End:</strong> Node.js, Express.js, MySQL, ER Diagrams</p>
+                <p><strong>Framework:</strong> Angular</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="restaurants shops jewelry commercial">
+            <div class="accordion-header">
+              <span>Point-of-Sale Systems</span>
+              <span class="proj-meta">Retail POS</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Point-of-sale systems for jewelry, restaurant, shop and commercial businesses.</p>
+              <p>The jewelry POS includes product listing, add-to-cart and wishlist management, with price, tax and discount calculated in real time for accurate invoice generation. Its front end is fully responsive across mobile, tablet and desktop, and the back end supports complete CRUD for products, categories, customers and orders.</p>
+              <div class="stack">
+                <p><strong>Businesses:</strong> Jewelry, Restaurant, Shop, Commercial</p>
+                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TypeScript</p>
+                <p><strong>Back-End:</strong> Node.js, Express.js, MySQL</p>
+                <p><strong>Framework:</strong> Angular</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-tags="">
+            <div class="accordion-header">
+              <span>Portfolio Management System</span>
+              <span class="proj-meta">Web app</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Lets professionals showcase their work and achievements through two panels: a user-facing portfolio for browsing projects and contacting the owner, and an admin panel for managing projects, skills and personal information behind secure authentication.</p>
+              <p>Supports full CRUD with a responsive design for desktop and mobile, and changes are reflected immediately.</p>
+              <div class="stack">
+                <p><strong>Front-End:</strong> HTML, CSS, Tailwind, TypeScript</p>
+                <p><strong>Back-End:</strong> Node.js, Express.js, MySQL</p>
                 <p><strong>Framework:</strong> Angular</p>
               </div>
             </div>
@@ -676,55 +723,106 @@
       </section>
       <!--todo details  -->
 
-      <section
-        data-aos="fade-right"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        class="achievement"
-      >
-        <!-- Projects Done  -->
-        <div class="detail">
-          <img src="./img/Projects Done img.svg" alt="" />
-          <div>
-            <h1>5+</h1>
-            <p>Projects Done</p>
+      <section class="achievement stats-bento" aria-label="Key numbers">
+        <div class="stat stat--feature">
+          <span class="stat__icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="3+"><span class="stat__value" data-count="3" aria-hidden="true">3</span><span class="stat__suffix" aria-hidden="true">+</span></p>
+            <p class="stat__label">Years of Experience</p>
+            <p class="stat__note">Full stack development with Node.js, Express.js, Angular and MySQL.</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Satisfied Clients  -->
-        <div class="detail">
-          <img src="img/Satisfied Clients img.svg" alt="" />
-          <div>
-            <h1>1+</h1>
-            <p>Satisfied Clients</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="12+"><span class="stat__value" data-count="12" aria-hidden="true">12</span><span class="stat__suffix" aria-hidden="true">+</span></p>
+            <p class="stat__label">Technologies</p>
+            <p class="stat__note">Across frontend, backend, databases and tools.</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Active Projects -->
-        <div class="detail">
-          <img src="img/Active Projects img.svg" alt="" />
-          <div>
-            <h1>1+</h1>
-            <p>Active Projects</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="4"><span class="stat__value" data-count="4" aria-hidden="true">4</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Payment Gateways</p>
+            <p class="stat__note">Stripe · Razorpay · MyFatoorah · Hesabe</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Team Members  -->
-        <div class="detail">
-          <img src="img/Team Members img.svg" alt="" />
-          <div>
-            <h1>1+</h1>
-            <p>Team Members</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="4"><span class="stat__value" data-count="4" aria-hidden="true">4</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Notification Channels</p>
+            <p class="stat__note">WhatsApp · SMS · Email · Push</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-earth-asia" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="3"><span class="stat__value" data-count="3" aria-hidden="true">3</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Markets Served</p>
+            <p class="stat__note">India · International · GCC</p>
+          </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
+        </div>
+      </section>
+
+      <!-- education (from resume) -->
+      <section class="edu-section" id="education">
+        <h1>Education &amp; <span>Certification</span></h1>
+        <p class="edu-intro">From civil engineering to full-stack development.</p>
+        <ol class="edu-track">
+          <li class="edu-step is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2016</span>
+              <p class="edu-meta">2016 – 2019 · Diploma</p>
+              <h2>Diploma in Civil Engineering</h2>
+              <p class="edu-place">EGS Pillay Polytechnic College</p>
+            </div>
+          </li>
+          <li class="edu-step is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2020</span>
+              <p class="edu-meta">2020 – 2023 · Degree</p>
+              <h2>B.E. Civil Engineering</h2>
+              <p class="edu-place">EGS Pillay Engineering College</p>
+            </div>
+          </li>
+          <li class="edu-step edu-step--accent is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-certificate"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">&lt;/&gt;</span>
+              <p class="edu-meta">Certification</p>
+              <h2>Full Stack Web Development</h2>
+              <p class="edu-place">Ahsan Solutions, Karaikal</p>
+            </div>
+          </li>
+          <li class="edu-step edu-step--now is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2024</span>
+              <p class="edu-meta">Jan 2024 – Present</p>
+              <h2>Full Stack Developer</h2>
+              <p class="edu-place">Cresentrix Solution</p>
+            </div>
+          </li>
+        </ol>
+        <div class="edu-langs">
+          <p class="edu-langs__label">Languages</p>
+          <ul><li>English</li><li>Tamil</li></ul>
+          <p class="edu-langs__remote"><span aria-hidden="true"></span>Open to remote work</p>
         </div>
       </section>
 
       <!-- todo People Talk About ME -->
 
       <!-- <section
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
         class="iq-features"
       >
         <h1>
@@ -847,9 +945,6 @@
       </section>
 
       <section
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
         class="image-text-sliders"
       >
         <h1>
@@ -986,16 +1081,13 @@
       <!-- todo Contact -->
 
       <section
-        data-aos="flip-left"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
         class="contacts"
       >
         <div class="contact-left">
           <h1>Contact Me</h1>
           <p>
-            There are many variations of passages of Lorem Ipsu available. but
-            the majority have suffered alte.
+            Hiring for a full stack or Node.js role, or have a project in mind?
+            I’m open to remote work. Reach out by email, phone or WhatsApp.
           </p>
 
           <!-- location -->
@@ -1003,7 +1095,7 @@
             <img src="img/location.svg" alt="" />
             <div class="content">
               <h5>Address:</h5>
-              <p>Nagapattinam ,TamilNadu</p>
+              <p>Nagapattinam, Tamil Nadu · Open to remote</p>
             </div>
           </div>
 
@@ -1021,7 +1113,7 @@
             <img src="img/phone.svg" alt="" />
             <div class="content">
               <h5>Call Me Now:</h5>
-              <p>+91 867 896 6685</p>
+              <p>+91 86789 66685</p>
             </div>
           </div>
         </div>
@@ -1044,15 +1136,16 @@
       <!-- todo footer-->
 
       <section
-        data-aos="fade-down-right"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
         class="footer"
       >
         <!-- footer-name -->
-        <div class="footer-Name">
-          <h2>A</h2>
-          <h2>Abdul_ <span>Musavvir</span></h2>
+        <div class="footer-cta">
+          <p class="footer-eyebrow">Open to remote work</p>
+          <h2 class="footer-title">Let’s build your next <span>project.</span></h2>
+          <div class="footer-actions">
+            <a class="footer-btn" href="mailto:abdulmusavir8888@gmail.com">Email me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="footer-btn footer-btn--ghost" href="https://wa.link/uo1c9r">WhatsApp</a>
+          </div>
         </div>
 
         <!-- footer-social-media -->
@@ -1079,6 +1172,7 @@
             href="https://www.instagram.com/mr__whitey?igsh=bWlyMXpkcXhscGN2"
             class="fa fa-instagram"
           ></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
         </div>
 
         <!-- footer-menuItem -->
@@ -1091,12 +1185,16 @@
             <li><a href="contact-page.html">Contact</a></li>
           </ul>
         </div> -->
+      
+        <div class="footer-bottom">
+          <p>© 2026 Abdul Musavvir · Full Stack Developer</p>
+          <p>Nagapattinam, Tamil Nadu · Open to remote</p>
+          <a class="footer-top" href="#">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+        </div>
       </section>
     </main>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  
   </body>
 </html>
+
+

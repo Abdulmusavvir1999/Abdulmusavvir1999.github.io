@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Contact · Abdul Musavvir</title>
+    <meta name="description" content="Get in touch with Abdul Musavvir, full stack developer based in Nagapattinam, Tamil Nadu and open to remote work." />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,17 +45,32 @@
     <!-- media-query -->
     <link rel="stylesheet" href="pmq.css" />
     <!-- Aos- -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- motion system -->
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script defer src="motion.js"></script>
   </head>
 
   <body>
+    <!-- intro / page-transition overlay (driven by motion.js) -->
+    <div class="mo-loader" aria-hidden="true">
+      <div class="mo-loader__layer mo-loader__layer--accent"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__layer mo-loader__layer--main"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__inner">
+        <div class="mo-loader__name"><span>Abdul</span><span>Musavvir</span></div>
+        <div class="mo-loader__bottom">
+          <div class="mo-loader__label"><span></span></div>
+          <div class="mo-loader__count"><span>0</span></div>
+        </div>
+      </div>
+      <div class="mo-loader__bar"></div>
+    </div>
     <div><a class="scroll-down" href="#"></a></div>
     <!-- todo header -->
-    <header
-      data-aos="fade-up-left"
-      data-aos-easing="ease-out-out"
-      data-aos-duration="1000"
-    >
+    <header>
       <div class="navName">
         <h2>A</h2>
         <h2>Abdul_ <span>Musavvir</span></h2>
@@ -243,16 +259,13 @@
       <!-- todo Contact -->
 
       <section
-        data-aos="flip-left"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
         class="contacts"
       >
         <div class="contact-left">
           <h1>Let’s discuss your Project</h1>
           <p>
-            There are many variations of passages of Lorem Ipsu available. but
-            the majority have suffered alte.
+            Hiring for a full stack or Node.js role, or have a project in mind?
+            I’m open to remote work. Reach out by email, phone or WhatsApp.
           </p>
 
           <!-- location -->
@@ -260,7 +273,7 @@
             <img src="img/location.svg" alt="" />
             <div class="content">
               <h5>Address:</h5>
-              <p>Nagapattinam District ,TamilNadu</p>
+              <p>Nagapattinam, Tamil Nadu · Open to remote</p>
             </div>
           </div>
 
@@ -278,7 +291,7 @@
             <img src="img/phone.svg" alt="" />
             <div class="content">
               <h5>Call Me Now:</h5>
-              <p>+91 867 896 6685</p>
+              <p>+91 86789 66685</p>
             </div>
           </div>
         </div>
@@ -301,15 +314,16 @@
       <!-- todo footer-->
 
       <section
-        data-aos="fade-down-right"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
         class="footer"
       >
         <!-- footer-name -->
-        <div class="footer-Name">
-          <h2>A</h2>
-          <h2>Abdul_ <span>Musavvir</span></h2>
+        <div class="footer-cta">
+          <p class="footer-eyebrow">Open to remote work</p>
+          <h2 class="footer-title">Let’s build your next <span>project.</span></h2>
+          <div class="footer-actions">
+            <a class="footer-btn" href="mailto:abdulmusavir8888@gmail.com">Email me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="footer-btn footer-btn--ghost" href="https://wa.link/uo1c9r">WhatsApp</a>
+          </div>
         </div>
 
         <!-- footer-social-media -->
@@ -336,6 +350,7 @@
             href="https://www.instagram.com/mr__whitey?igsh=bWlyMXpkcXhscGN2"
             class="fa fa-instagram"
           ></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
         </div>
 
         <!-- footer-menuItem -->
@@ -348,12 +363,16 @@
             <li><a href="contact-page.html">Contact</a></li>
           </ul>
         </div> -->
+      
+        <div class="footer-bottom">
+          <p>© 2026 Abdul Musavvir · Full Stack Developer</p>
+          <p>Nagapattinam, Tamil Nadu · Open to remote</p>
+          <a class="footer-top" href="#">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+        </div>
       </section>
     </main>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  
   </body>
 </html>
+
+

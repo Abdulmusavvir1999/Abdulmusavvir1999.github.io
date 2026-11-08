@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>About · Abdul Musavvir</title>
+    <meta name="description" content="About Abdul Musavvir: experience, education and 3 years of full-stack development." />
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,21 +37,36 @@
   <!-- media-query -->
   <link rel="stylesheet" href="pmq.css">
   <!-- Aos- -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- circle-slider -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <!-- motion system -->
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script defer src="motion.js"></script>
+  </head>
 
 <body>
+    <!-- intro / page-transition overlay (driven by motion.js) -->
+    <div class="mo-loader" aria-hidden="true">
+      <div class="mo-loader__layer mo-loader__layer--accent"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__layer mo-loader__layer--main"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__inner">
+        <div class="mo-loader__name"><span>Abdul</span><span>Musavvir</span></div>
+        <div class="mo-loader__bottom">
+          <div class="mo-loader__label"><span></span></div>
+          <div class="mo-loader__count"><span>0</span></div>
+        </div>
+      </div>
+      <div class="mo-loader__bar"></div>
+    </div>
   <div><a class="scroll-down" href="#"></a></div>
     <!-- todo header -->
-    <header
-      data-aos="fade-up-left"
-      data-aos-easing="ease-out-out"
-      data-aos-duration="1000"
-    >
+    <header>
       <div class="navName">
         <h2>A</h2>
         <h2>Abdul_ <span>Musavvir</span></h2>
@@ -238,24 +254,23 @@
 
         <!-- todo about -->
         <section
-        data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
         class="about"
       >
         <!-- about-left -->
         <div class="about-left">
-          <p>Hello</p>
+          <p>Open to remote</p>
           <h1>I'm <span>Abdul Musavvir</span></h1>
           <h1>Full Stack Developer</h1>
+          <ul class="hero-stack" aria-label="Core stack">
+            <li>Node.js</li><li>Express</li><li>Angular</li><li>MySQL</li><li>Redis</li>
+          </ul>
           <p class="about-para2">
-            I'm a full-stack developer with 1 year of experience, passionate
-            about building responsive, user-friendly applications. I bring a
-            fresh design perspective, strong problem-solving skills, and a
-            continuous drive to learn and grow. I'm eager to contribute to
-            dynamic teams and help craft engaging digital experiences that make
-            an impact.
+            I’m a full stack developer with 3 years of experience building
+            e-commerce, ticket booking, ERP, point-of-sale and business
+            applications with Node.js, Express.js, Angular and MySQL. I’ve
+            integrated four payment gateways across India, international and GCC
+            markets, and built WhatsApp, SMS, email and push notification systems,
+            Redis caching, queue-based processing and cron-scheduled jobs.
           </p>
           <div class="about-hire">
             <a href="mailto:abdulmusavir8888@gmail.com"
@@ -289,6 +304,7 @@
               href="https://www.instagram.com/mr__whitey?igsh=bWlyMXpkcXhscGN2"
               class="fa fa-instagram"
             ></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
           </div>
         </div>
         <!-- about-right -->
@@ -304,16 +320,16 @@
           <img src="img/Rectangle 1.svg" alt="" />
           <div class="about-right-box">
             <div class="box about-right-box-one">
-              <h2>1+</h2>
+              <h2>3+</h2>
               <p>Years of Experience</p>
             </div>
             <div class="box about-right-box-two">
-              <h2>1+</h2>
-              <p>Happy Client</p>
+              <h2>4</h2>
+              <p>Payment Gateways</p>
             </div>
             <div class="box about-right-box-three">
-              <h2>1+</h2>
-              <p>Project Donel</p>
+              <h2>3</h2>
+              <p>Markets: India, Intl, GCC</p>
             </div>
           </div>
         </div>
@@ -322,10 +338,6 @@
       <!-- todo project second part -->
 
       <section
-        data-aos="fade-right"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
         class="project"
       >
         <!-- project-left -->
@@ -363,12 +375,11 @@
             Your Next<span>Project!</span>
           </h1>
           <p>
-            With a year of hands-on experience in full-stack development, I’m
-            eager to contribute to impactful projects. I specialize in building
-            user-centric digital solutions that emphasize performance, intuitive
-            design, and usability. My passion lies in solving problems through
-            thoughtful design, research, and seamless development across the
-            stack.
+            In 3 years of full-stack work I’ve taken ERP, booking and business
+            applications from ER diagram to production: designing MySQL schemas,
+            turning complex multi-step business flows into structured REST APIs,
+            and building the Angular front ends on top, including payments,
+            multi-channel notifications, Redis caching and scheduled jobs.
           </p>
           <!-- <a href="contact-page.html"><button> <img src="img/th-removebg-preview (1).png" alt=""> Hire Me</button></a> -->
         </div>
@@ -376,18 +387,100 @@
 
 
   <!-- todo Contact -->
+      <!-- experience (from resume) -->
+      <section class="exp-section" id="experience">
+        <h1>Work <span>Experience</span></h1>
+        <article class="exp-card">
+          <div class="exp-head">
+            <div>
+              <p class="exp-date">Jan 2024 – Present</p>
+              <h2>Full Stack Developer</h2>
+              <p class="exp-company">Cresentrix Solution</p>
+            </div>
+            <span class="exp-badge">Current role</span>
+          <ul class="exp-tags" aria-label="Technologies used">
+            <li>Node.js</li><li>Express.js</li><li>Angular</li><li>MySQL</li><li>Redis</li><li>Queues</li><li>Cron</li><li>Stripe</li><li>Razorpay</li><li>WhatsApp API</li><li>Firebase</li>
+          </ul>
+          </div>
+          <ul class="exp-list">
+            <li><strong>Payments</strong>Integrated Stripe, Razorpay, MyFatoorah and Hesabe payment gateways, handling checkout, payment verification and webhook-based status updates for customers in India, international and GCC markets.</li>
+            <li><strong>Bookings</strong>Built a booking system with slot availability, reservation and status flows, using queues to process bookings reliably and prevent conflicts.</li>
+            <li><strong>Notifications</strong>Developed a multi-channel notification service sending WhatsApp (Meta Business API), SMS, email and Firebase push notifications for bookings, payments and reminders.</li>
+            <li><strong>Performance</strong>Implemented Redis caching for frequently accessed data to reduce database load and improve API response times.</li>
+            <li><strong>Automation</strong>Automated recurring tasks such as reminders, status updates and reports with cron jobs.</li>
+            <li><strong>Data design</strong>Designed ER diagrams and MySQL schemas for ERP modules, and turned complex multi-step business flows into structured REST APIs.</li>
+            <li><strong>School ERP</strong>Built a School Management ERP covering curriculum, attendance, leave, payroll with automatic deductions, role-based access, and certificate, ID card and report card generation.</li>
+            <li><strong>POS Systems</strong>Built point-of-sale systems for jewelry, restaurant, shop and commercial businesses, including a jewelry POS with real-time price, tax and discount calculation and invoice generation.</li>
+            <li><strong>E-commerce &amp; Ticketing</strong>Worked on an e-commerce website and a ticket booking platform with dedicated vendor and organizer roles.</li>
+          </ul>
+        </article>
+      </section>
 
-  <section data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" class="contacts">
+      <!-- education (from resume) -->
+      <section class="edu-section" id="education">
+        <h1>Education &amp; <span>Certification</span></h1>
+        <p class="edu-intro">From civil engineering to full-stack development.</p>
+        <ol class="edu-track">
+          <li class="edu-step is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2016</span>
+              <p class="edu-meta">2016 – 2019 · Diploma</p>
+              <h2>Diploma in Civil Engineering</h2>
+              <p class="edu-place">EGS Pillay Polytechnic College</p>
+            </div>
+          </li>
+          <li class="edu-step is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2020</span>
+              <p class="edu-meta">2020 – 2023 · Degree</p>
+              <h2>B.E. Civil Engineering</h2>
+              <p class="edu-place">EGS Pillay Engineering College</p>
+            </div>
+          </li>
+          <li class="edu-step edu-step--accent is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-certificate"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">&lt;/&gt;</span>
+              <p class="edu-meta">Certification</p>
+              <h2>Full Stack Web Development</h2>
+              <p class="edu-place">Ahsan Solutions, Karaikal</p>
+            </div>
+          </li>
+          <li class="edu-step edu-step--now is-on">
+            <span class="edu-node" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+            <div class="edu-card">
+              <span class="edu-watermark" aria-hidden="true">2024</span>
+              <p class="edu-meta">Jan 2024 – Present</p>
+              <h2>Full Stack Developer</h2>
+              <p class="edu-place">Cresentrix Solution</p>
+            </div>
+          </li>
+        </ol>
+        <div class="edu-langs">
+          <p class="edu-langs__label">Languages</p>
+          <ul><li>English</li><li>Tamil</li></ul>
+          <p class="edu-langs__remote"><span aria-hidden="true"></span>Open to remote work</p>
+        </div>
+      </section>
+
+
+
+  <section class="contacts">
     <div class="contact-left">
       <h1>Let’s discuss your Project</h1>
-      <p>There are many variations of passages of Lorem Ipsu available. but the majority have suffered alte.</p>
+      <p>
+            Hiring for a full stack or Node.js role, or have a project in mind?
+            I’m open to remote work. Reach out by email, phone or WhatsApp.
+          </p>
 
       <!-- location -->
       <div class="contact location">
         <img src="img/location.svg" alt="">
         <div class="content">
           <h5>Address:</h5>
-          <p>Nagapattinam District ,TamilNadu</p>
+          <p>Nagapattinam, Tamil Nadu · Open to remote</p>
         </div>
       </div>
 
@@ -407,7 +500,7 @@
         <img src="img/phone.svg" alt="">
         <div class="content">
           <h5>Call Me Now:</h5>
-          <p>+91 867 856 6685</p>
+          <p>+91 86789 66685</p>
         </div>
       </div>
     </div>
@@ -431,16 +524,17 @@
   <!-- todo footer-->
 
   <section
-  data-aos="fade-down-right"
-  data-aos-easing="ease-in-out"
-  data-aos-duration="1000"
   class="footer"
 >
   <!-- footer-name -->
-  <div class="footer-Name">
-    <h2>A</h2>
-    <h2>Abdul_ <span>Musavvir</span></h2>
-  </div>
+  <div class="footer-cta">
+          <p class="footer-eyebrow">Open to remote work</p>
+          <h2 class="footer-title">Let’s build your next <span>project.</span></h2>
+          <div class="footer-actions">
+            <a class="footer-btn" href="mailto:abdulmusavir8888@gmail.com">Email me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="footer-btn footer-btn--ghost" href="https://wa.link/uo1c9r">WhatsApp</a>
+          </div>
+        </div>
 
   <!-- footer-social-media -->
   <div class="footer-social-media">
@@ -466,6 +560,7 @@
       href="https://www.instagram.com/mr__whitey?igsh=bWlyMXpkcXhscGN2"
       class="fa fa-instagram"
     ></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
   </div>
 
   <!-- footer-menuItem -->
@@ -478,14 +573,17 @@
       <li><a href="contact-page.html">Contact</a></li>
     </ul>
   </div> -->
-</section>
+
+        <div class="footer-bottom">
+          <p>© 2026 Abdul Musavvir · Full Stack Developer</p>
+          <p>Nagapattinam, Tamil Nadu · Open to remote</p>
+          <a class="footer-top" href="#">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+        </div>
+      </section>
   </main>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
-</body>
+  </body>
 
 </html>
+

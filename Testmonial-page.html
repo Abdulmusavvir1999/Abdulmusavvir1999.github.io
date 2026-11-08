@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Testimonials · Abdul Musavvir</title>
+    <meta name="description" content="What people say about working with Abdul Musavvir." />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,7 +54,6 @@
     />
 
     <!-- Aos- -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- circle-slider -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -61,16 +61,32 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- motion system -->
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script defer src="motion.js"></script>
   </head>
 
   <body>
+    <!-- intro / page-transition overlay (driven by motion.js) -->
+    <div class="mo-loader" aria-hidden="true">
+      <div class="mo-loader__layer mo-loader__layer--accent"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__layer mo-loader__layer--main"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="mo-loader__inner">
+        <div class="mo-loader__name"><span>Abdul</span><span>Musavvir</span></div>
+        <div class="mo-loader__bottom">
+          <div class="mo-loader__label"><span></span></div>
+          <div class="mo-loader__count"><span>0</span></div>
+        </div>
+      </div>
+      <div class="mo-loader__bar"></div>
+    </div>
     <div><a class="scroll-down" href="#"></a></div>
     <!-- todo header -->
-    <header
-      data-aos="fade-up-left"
-      data-aos-easing="ease-out-out"
-      data-aos-duration="1000"
-    >
+    <header>
       <div class="navName">
         <h2>A</h2>
         <h2>Abdul_ <span>Musavvir</span></h2>
@@ -264,9 +280,6 @@
     <main>
       <!-- todo People Talk About ME -->
       <section
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
         class="iq-features"
       >
         <h1>
@@ -389,9 +402,6 @@
       </section>
 
       <section
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
         class="image-text-sliders"
       >
         <h1>
@@ -525,62 +535,64 @@
 
       <!-- achievement -->
 
-      <section
-        data-aos="fade-right"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        class="achievement"
-      >
-        <!-- Projects Done  -->
-        <div class="detail">
-          <img src="./img/Projects Done img.svg" alt="" />
-          <div>
-            <h1>270+</h1>
-            <p>Projects Done</p>
+      <section class="achievement stats-bento" aria-label="Key numbers">
+        <div class="stat stat--feature">
+          <span class="stat__icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="3+"><span class="stat__value" data-count="3" aria-hidden="true">3</span><span class="stat__suffix" aria-hidden="true">+</span></p>
+            <p class="stat__label">Years of Experience</p>
+            <p class="stat__note">Full stack development with Node.js, Express.js, Angular and MySQL.</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Satisfied Clients  -->
-        <div class="detail">
-          <img src="img/Satisfied Clients img.svg" alt="" />
-          <div>
-            <h1>80+</h1>
-            <p>Satisfied Clients</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="12+"><span class="stat__value" data-count="12" aria-hidden="true">12</span><span class="stat__suffix" aria-hidden="true">+</span></p>
+            <p class="stat__label">Technologies</p>
+            <p class="stat__note">Across frontend, backend, databases and tools.</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Active Projects -->
-        <div class="detail">
-          <img src="img/Active Projects img.svg" alt="" />
-          <div>
-            <h1>27+</h1>
-            <p>Active Projects</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="4"><span class="stat__value" data-count="4" aria-hidden="true">4</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Payment Gateways</p>
+            <p class="stat__note">Stripe · Razorpay · MyFatoorah · Hesabe</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
-
-        <!-- Team Members  -->
-        <div class="detail">
-          <img src="img/Team Members img.svg" alt="" />
-          <div>
-            <h1>5+</h1>
-            <p>Team Members</p>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="4"><span class="stat__value" data-count="4" aria-hidden="true">4</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Notification Channels</p>
+            <p class="stat__note">WhatsApp · SMS · Email · Push</p>
           </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><i class="fa-solid fa-earth-asia" aria-hidden="true"></i></span>
+          <div class="stat__body">
+            <p class="stat__num" aria-label="3"><span class="stat__value" data-count="3" aria-hidden="true">3</span><span class="stat__suffix" aria-hidden="true"></span></p>
+            <p class="stat__label">Markets Served</p>
+            <p class="stat__note">India · International · GCC</p>
+          </div>
+          <span class="stat__pips" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></span>
         </div>
       </section>
 
       <!-- todo Contact -->
 
       <section
-        data-aos="flip-left"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
         class="contacts"
       >
         <div class="contact-left">
           <h1>Let’s discuss your Project</h1>
           <p>
-            There are many variations of passages of Lorem Ipsu available. but
-            the majority have suffered alte.
+            Hiring for a full stack or Node.js role, or have a project in mind?
+            I’m open to remote work. Reach out by email, phone or WhatsApp.
           </p>
 
           <!-- location -->
@@ -588,7 +600,7 @@
             <img src="img/location.svg" alt="" />
             <div class="content">
               <h5>Address:</h5>
-              <p>Nagapattinam District ,TamilNadu</p>
+              <p>Nagapattinam, Tamil Nadu · Open to remote</p>
             </div>
           </div>
 
@@ -606,7 +618,7 @@
             <img src="img/phone.svg" alt="" />
             <div class="content">
               <h5>Call Me Now:</h5>
-              <p>+91 867 896 6685</p>
+              <p>+91 86789 66685</p>
             </div>
           </div>
         </div>
@@ -629,15 +641,16 @@
       <!-- todo footer-->
 
       <section
-        data-aos="fade-down-right"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
         class="footer"
       >
         <!-- footer-name -->
-        <div class="footer-Name">
-          <h2>A</h2>
-          <h2>Abdul_ <span>Musavvir</span></h2>
+        <div class="footer-cta">
+          <p class="footer-eyebrow">Open to remote work</p>
+          <h2 class="footer-title">Let’s build your next <span>project.</span></h2>
+          <div class="footer-actions">
+            <a class="footer-btn" href="mailto:abdulmusavir8888@gmail.com">Email me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="footer-btn footer-btn--ghost" href="https://wa.link/uo1c9r">WhatsApp</a>
+          </div>
         </div>
 
         <!-- footer-social-media -->
@@ -649,6 +662,7 @@
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-instagram"></a>
+          <a href="https://github.com/Abdulmusavvir1999" class="fa fa-github"></a>
         </div>
 
         <!-- footer-menuItem -->
@@ -661,12 +675,16 @@
             <li><a href="contact-page.html">Contact</a></li>
           </ul>
         </div>
+      
+        <div class="footer-bottom">
+          <p>© 2026 Abdul Musavvir · Full Stack Developer</p>
+          <p>Nagapattinam, Tamil Nadu · Open to remote</p>
+          <a class="footer-top" href="#">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+        </div>
       </section>
     </main>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  
   </body>
 </html>
+
+

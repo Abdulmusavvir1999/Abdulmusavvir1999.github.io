@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+< lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    .work-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 7rem;
+    position: relative;
+    margin-bottom: var(--div-margin);
+
+    h1 {
+        font-size: 2rem;
+
+        span {
+            color: var(--orange-color);
+        }
+    }
+}
+
+.items {
+    display: flex;
+    margin-block: 2rem;
+    cursor: pointer;
+
+    .item {
+        font-size: 1.1rem;
+        text-decoration: none;
+        margin-left: 1rem;
+        margin-block: 0.5rem;
+        color: var(--link-color);
+        font-weight: 500;
+    }
+
+    .item:hover {
+        color: var(--orange-color);
+        transform: scale(110%);
+    }
+}
+
+.items p.active,
+.items p:hover {
+    color: var(--orange-color);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    cursor: pointer;
+
+    img {
+        position: relative;
+        width: 17rem;
+        height: 11rem;
+        border-radius: 1rem;
+    }
+
+
+
+    img::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 10rem;
+        background-color: #2B6BFE;
+        top: 10%;
+        left: 10%;
+
+    }
+}
+
+.work-parent button {
+    margin-block: 2rem;
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    border: 1.5px solid var(--orange-color);
+    border-radius: 0.5rem;
+    color: var(--orange-color);
+    font-weight: 700;
+    transform: skew(-10deg);
+    cursor: pointer;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+}
+
+.work-parent button:hover {
+    transform: scale(110%);
+}
+
+.img {
+    position: relative;
+    transition: transform 0.5s;
+
+    .content {
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        bottom: -5%;
+        text-align: center;
+        margin-block: 0.5rem;
+        background-color: #FFFFFF;
+        transition: all 0.5s;
+        opacity: 0;
+        transform: translateY(10px);
+        /* Added to make the transition smoother */
+    }
+
+    &:hover {
+        transform: scale(1.1);
+
+        .content {
+            opacity: 1;
+            transform: translateY(0);
+            /* Adjust as needed */
+        }
+    }
+}
+
+.content h3 {
+    color: #010F5C;
+}
+
+.content p {
+    color: var(--link-color);
+}
+
+
+
+
+/* filter */
+
+.gallery .image.hide {
+    display: none;
+}
+
+.gallery .image.show {
+    animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* preview-box */
+
+.preview-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #000000;
+    max-width: 600px;
+    width: 75vw;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.preview-box .details {
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preview-box p {
+    color: white !important;
+    padding: 0.5rem;
+
+    a {
+        color: blue;
+    }
+}
+
+.details .title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.details .title p {
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.details .icon {
+    font-style: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+.preview-box .image-box {
+    /* width: 100%; */
+    display: flex;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+
+.shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.shadow.show {
+    display: block;
+}
+  </style>
+  <body>
+  <section
+    id="my-project"
+    data-aos="fade-down-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    class="work-parent"
+  >
+    <!-- heading -->
+    <h1>My Recent <span>Work</span></h1>
+    <!-- links -->
+    <div class="items">
+      <p class="item active" data-name="all" href="">All</p>
+      <p class="item" data-name="Frontend" href="">Frontend</p>
+      <p class="item" data-name="Backend" href="">Backend</p>
+      <p class="item" data-name="Web Design" href="">Web Design</p>
+      <!-- <button class="item active" data-name="all" >View All</button> -->
+    </div>
+  
+    <!-- work-images -->
+    <div class="gallery">
+      <!-- Web-Design -->
+      <div class="image img" data-name="Frontend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="./img/web-design.png" alt="Web-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>web-design</p>
+        </div>
+      </div>
+  
+      <div class="image img" data-name="Frontend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/web-design-two.jpg" alt="Web-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>web-design</p>
+        </div>
+      </div>
+      <div class="image img" data-name="Frontend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/web-design-three.jpg" alt="Web-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>web-design</p>
+        </div>
+      </div>
+  
+      <!-- App-Design -->
+      <div class="image img" data-name="Backend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/mobile-design-one.jpg" alt="App-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>App-Design</p>
+        </div>
+      </div>
+  
+      <div class="image img" data-name="Backend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/mobile-design-two.jpg" alt="App-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>App-Design</p>
+        </div>
+      </div>
+  
+      <div class="image img" data-name="Backend">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/mobile-design-three.jpg" alt="App-Design" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>App-Design</p>
+        </div>
+      </div>
+  
+      <!-- Case-Studies -->
+      <div class="image img" data-name="Web Design">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/case-study-one.jpg" alt="Case-Studies" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>Case-Studies</p>
+        </div>
+      </div>
+      <div class="image img" data-name="Web Design">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/case-study-two.webp" alt="Case-Studies" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>Case-Studies</p>
+        </div>
+      </div>
+      <div class="image img" data-name="Web Design">
+        <a class="img-link" href="./service-page.html"></a>
+        <img src="img/case-study-three.jpg" alt="Case-Studies" />
+        <div class="content">
+          <h3>Creative Agency</h3>
+          <p>Case-Studies</p>
+        </div>
+      </div>
+    </div>
+    <!-- fullscreen img preview box -->
+    <div class="preview-box">
+      <div class="details">
+        <span class="title"
+          >Image Category:
+          <p></p
+        ></span>
+        <span class="icon fas fa-times"></span>
+      </div>
+      <div class="image-box">
+        <img src="" alt="" />
+      </div>
+      <p>View Project: <a href="#" class="link">Click me</a></p>
+    </div>
+    <div class="shadow"></div>
+  </section>
+  
+</body>
+</html>
